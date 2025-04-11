@@ -50,8 +50,10 @@ const Navbar = () => {
                     // onChange={(e) => setIssue(e.target.value)}
                 >
                     <option value="" disabled selected>Language</option>
-                    <option value="environment">Environment</option>
-                    <option value="education">Education</option>
+                    <option value="environment">English</option>
+                    <option value="education">Igbo</option>
+                    <option value="education">Hausa</option>
+                    <option value="education">Pidgin</option>
                 </select>
 
             </ul>
