@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 :root {
   --primary-color: #2284c5;
 }
@@ -19,22 +20,11 @@ body {
   box-sizing: border-box;
 }
 
-.layout {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  font-family: "Nuito", sans-serif;
-}
-
 .nav-bar {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   color: white;
   margin: 20px auto;
   /* background-color: red; */
@@ -57,7 +47,7 @@ body {
   text-align: start;
 }
 .nav-bar article h1 {
-  background: linear-gradient(94.74deg, #142B75 3.83%, #1E40AF 66.62%);
+  background: linear-gradient(94.74deg, #142b75 3.83%, #1e40af 66.62%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -88,37 +78,24 @@ body {
   color: black;
 }
 
-#issue-category{
+#issue-category {
   border: none;
 }
 
 .issue-category {
-  appearance: none;         /* Remove native arrow */
+  appearance: none; /* Remove native arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M36 18L24 30L12 18'/></svg>") no-repeat right 1rem center;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M36 18L24 30L12 18'/></svg>")
+    no-repeat right 1rem center;
   background-size: 1rem;
-  padding-right: 2.5rem; 
+  padding-right: 2.5rem;
 }
-
 
 .active-link {
   color: var(--primary-color);
   font-weight: bold;
   border-bottom: 2px solid var(--primary-color);
-}
-
-.footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  color: white;
-  margin: 20px auto 0 auto;
-  padding-bottom: 20px;
-  background-color: #1E40AF;
 }
 
 .footer .footer-top {
@@ -148,7 +125,7 @@ body {
 
 .footer-link a,
 .footer-link ul,
-  .footer-link li {
+.footer-link li {
   text-decoration: none;
   color: grey;
   list-style: none;
@@ -160,7 +137,7 @@ body {
   margin: 10px 0;
 }
 
-.footer-top .first p{
+.footer-top .first p {
   font-family: "Nuito", sans-serif;
 }
 
