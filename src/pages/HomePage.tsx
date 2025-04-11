@@ -2,6 +2,11 @@ import { ExploreCard } from "../components/ExploreCard"
 import imagePath from '../assets/8c66658910c081da7440d0b15db9a66a.jpeg';
 import imagePath2 from '../assets/7359671ebfe1e09c73552ce832fd583e.jpeg';
 import imagePath3 from '../assets/0c814fa334e1c038e5f40dfe120687f4.jpeg';
+import navigationImg1 from '../assets/4491a644ea2b0549039f510c6a8321df.jpeg';
+import navigationImg2 from '../assets/0cd23141c75c4929c05dc8d1322a35a8.jpeg';
+import navigationImg3 from '../assets/7e5bcd5f5459137f6d4e984c8372c605.jpeg';
+import navigationImg4 from '../assets/df18162ca8f2d2f6bb8d4b0b9844226a.jpeg';
+
 
 export const HomePage = () => {
     return ( 
@@ -46,6 +51,26 @@ export const HomePage = () => {
                         subtitle="No more guessing. View official names, roles, and communication channels."
                     />
                     </div>
+            </section>
+
+            <section className="navigator">
+                <div className="navigator-box">
+                    <div className="photos">
+                        <div className="first">
+                            <img src={navigationImg1} alt="img 1" />
+                            <img src={navigationImg2} alt="img 2" className="extra-height"/>
+                        </div>
+                        <div className="second">
+                            <img src={navigationImg3} alt="img 3" />
+                            <img src={navigationImg4} alt="img 4" />
+                        </div>
+                    </div>
+
+                    <article className="navigate-text">
+                        <h1>Why Choose CivicLink Navigator?</h1>
+                        <p>CivicLink Navigator is the trusted tool for easily navigating Nigeria’s government landscape. With quick access to verified contacts and a user-friendly interface, we help you connect with the right officials, ensuring your civic needs are met with ease.</p>
+                    </article>
+                </div>
             </section>
         </>
         
