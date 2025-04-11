@@ -23,19 +23,19 @@ const Footer = () => {
                 <cite>Quick Link</cite>
                 <ul>
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Home </Link>
                     </li>
 
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Contact Offical </Link>
                     </li>
 
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Service </Link>
                     </li>
@@ -46,19 +46,19 @@ const Footer = () => {
                 <cite>Social</cite>
                 <ul>
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Twitter </Link>
                     </li>
 
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > LinkedIn </Link>
                     </li>
                     
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Facebook </Link>
                     </li>
@@ -69,19 +69,19 @@ const Footer = () => {
                 <cite>Legal</cite>
                 <ul>
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Terms </Link>
                     </li>
 
                     <li>
-                        <Link 
+                        <Link to="#"
                             
                         > Privacy </Link>
                     </li>
                     
                     <li>
-                        <Link 
+                        <Link to="#"
                         > Contact </Link>
                     </li>
                 
