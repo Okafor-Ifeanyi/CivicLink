@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footer mt-auto flex flex-col justify-center items-center bg-primary text-white">
+    <div className="footer">
       <h1 className="footer-h1">CivicLink</h1>
       <div className="footer-top">
         <div className="first">
@@ -62,15 +62,13 @@ const Footer = () => {
           <cite>Quick Link</cite>
           <ul>
             <li>
-              <Link> Home </Link>
+              <Link to="/">Home</Link>
             </li>
-
             <li>
-              <Link> Contact Offical </Link>
+              <Link to="/contact">Contact Official</Link>
             </li>
-
             <li>
-              <Link> Service </Link>
+              <Link to="/services">Service</Link>
             </li>
           </ul>
         </div>
@@ -78,15 +76,13 @@ const Footer = () => {
           <cite>Social</cite>
           <ul>
             <li>
-              <Link> Twitter </Link>
+              <Link to="https://twitter.com">Twitter</Link>
             </li>
-
             <li>
-              <Link> LinkedIn </Link>
+              <Link to="https://linkedin.com">LinkedIn</Link>
             </li>
-
             <li>
-              <Link> Facebook </Link>
+              <Link to="https://facebook.com">Facebook</Link>
             </li>
           </ul>
         </div>
@@ -94,15 +90,13 @@ const Footer = () => {
           <cite>Legal</cite>
           <ul>
             <li>
-              <Link> Terms </Link>
+              <Link to="/terms">Terms</Link>
             </li>
-
             <li>
-              <Link> Privacy </Link>
+              <Link to="/privacy">Privacy</Link>
             </li>
-
             <li>
-              <Link> Contact </Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

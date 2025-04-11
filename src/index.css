@@ -26,7 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
-  margin: 20px auto;
+  margin: 10px auto;
   /* background-color: red; */
 }
 
@@ -98,6 +98,19 @@ body {
   border-bottom: 2px solid var(--primary-color);
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: #1e40af;
+}
+
 .footer .footer-top {
   display: flex;
   justify-content: space-between;
@@ -147,4 +160,290 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+}
+
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  /* background: url('./assets/d0741e7f8e8c89079a86f56c4f156416.jpeg') center center no-repeat; */
+  background: linear-gradient(
+      65.4deg,
+      rgba(30, 64, 175, 0.6) 32.98%,
+      rgba(64, 170, 158, 0.6) 95.47%
+    ),
+    url("./assets/d0741e7f8e8c89079a86f56c4f156416.jpeg") center center
+      no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-page .wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 40px;
+}
+
+.home-page .wrapper h1 {
+  font-size: 54px;
+  font-family: "Public Sans", sans-serif;
+  line-height: 80px;
+  font-weight: 700;
+  margin: 24px 0;
+}
+
+.home-page .wrapper p {
+  font-size: 16px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 30px;
+}
+
+.search-filter {
+  width: 100%;
+  margin: 30px 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.search-filter .search {
+  width: 55%;
+  /* background-color: red; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-filter .search input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.search-filter .search input::placeholder {
+  border: none;
+  padding: 0 10px;
+  color: white;
+}
+
+.search-filter .search input::content {
+  border: none;
+}
+
+.search-filter .filter-button {
+  width: 15%;
+  /* background-color: red; */
+  margin-left: 10px;
+  padding: 15px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #4dccbd;
+}
+
+.search-filter .filter-button span {
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+
+.explore {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.explore .intro {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.explore .intro h1 {
+  font-size: 36px;
+  font-family: "Public Sans", sans-serif;
+  /* line-height: 80px; */
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.explore-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.explore-cards .card {
+  width: 30%;
+  margin: 10px;
+  /* padding: 20px; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explore-cards .card img {
+  width: 100%;
+  height: 160px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.explore-cards .card article {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card article h2 {
+  font-size: 14px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card article p {
+  font-size: 12px;
+  /* font-family: 'Public Sans', sans-serif; */
+  font-weight: 200;
+  margin: 10px 0;
+}
+
+.explore-button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #1e40af;
+  color: white;
+  border-radius: 8px;
+}
+
+.navigator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #d2d9ef33;
+  margin: 20px auto;
+}
+
+.navigator-box {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+.navigator .photos {
+  width: 35%;
+  height: 320px;
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  /* align-items: flex-start;
+  justify-content: flex-start; */
+}
+
+.navigator .photos img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.navigate-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.navigate-text h1 {
+  font-size: 36px;
+  font-family: "Public Sans", sans-serif;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.navigator .photos .first {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.navigator .photos .first img {
+  border-radius: 8px;
+}
+
+.navigator .photos .second img {
+  border-radius: 8px;
+}
+
+.navigator .photos .second {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+.navigate-text p {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.extra-height {
+  height: 200px;
+  /* display: none; */
 }
