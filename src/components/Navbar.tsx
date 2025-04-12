@@ -30,34 +30,35 @@ const Navbar = () => {
   const currentPath = location.pathname;
 
   return (
-    <nav className="nav-bar container mx-auto flex max-sm:flex-col gap-4 justify-between items-center min-h-22 p-4">
-      <CivicLinkLogo />
-
-      <ul className="flex gap-4 md:gap-10 items-center">
-        {links.map((link) => (
-          <li key={link.path} className="group relative">
-            <Link
-              to={link.path}
-              className={currentPath === link.path ? "font-bold" : ""}
-            >
-              {link.name}
-            </Link>
-            <hr className="border-b-2 border-gray-300 scale-x-0 group-hover:scale-x-100 transition-all duration-300" />
-          </li>
-        ))}
-        <Select>
-          <SelectTrigger className="bg-transparent border-none">
-            <SelectValue placeholder="Language" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="english">English</SelectItem>
-            <SelectItem value="igbo">Igbo</SelectItem>
-            <SelectItem value="hausa">Hausa</SelectItem>
-            <SelectItem value="pidgin">Pidgin</SelectItem>
-          </SelectContent>
-        </Select>
-      </ul>
-    </nav>
+    <div className="nav-wrapper border-b border-gray-100">
+      <nav className="nav-bar container mx-auto flex max-sm:flex-col gap-4 justify-between items-center min-h-22 p-4">
+        <CivicLinkLogo />
+        <ul className="flex gap-4 md:gap-10 items-center">
+          {links.map((link) => (
+            <li key={link.path} className="group relative">
+              <Link
+                to={link.path}
+                className={currentPath === link.path ? "font-bold" : ""}
+              >
+                {link.name}
+              </Link>
+              <hr className="border-b-2 border-gray-300 scale-x-0 group-hover:scale-x-100 transition-all duration-300" />
+            </li>
+          ))}
+          <Select>
+            <SelectTrigger className="bg-transparent border-none">
+              <SelectValue placeholder="Language" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="english">English</SelectItem>
+              <SelectItem value="igbo">Igbo</SelectItem>
+              <SelectItem value="hausa">Hausa</SelectItem>
+              <SelectItem value="pidgin">Pidgin</SelectItem>
+            </SelectContent>
+          </Select>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

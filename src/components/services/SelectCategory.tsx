@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { SearchIcon } from "lucide-react";
+import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
 
 const categories = [
   {
@@ -95,41 +99,44 @@ const SelectCategory: React.FC<{ onSelect?: (value: string) => void }> = ({
       </p>
 
       <div className="mb-6">
-        <div className="flex gap-2 justify-center">
-          <input
-            type="text"
-            placeholder="Can't find your category? Try searching..."
-            className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-[600px]"
-          />
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
-            Search
-          </button>
+        <div className="flex gap-2 flex-wrap justify-center *:grow">
+          <div className="search relative max-w-100 w-full">
+            <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 size-5" />
+            <Input
+              type="search"
+              placeholder="Can't find your category? Try searching..."
+              className="w-full pl-8"
+            />
+          </div>
+          <Button size="lg">Search</Button>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {categories.map((category, index) => (
-          <div
+          <Card
             key={index}
-            className={`p-6 border border-gray-400 cursor-pointer rounded-lg hover:shadow-lg transition-shadow ${
+            className={`cursor-pointer hover:shadow-lg transition-shadow ${
               selectedCategory === category.title
                 ? "bg-blue-50 border-primary shadow-md"
                 : ""
             }`}
             onClick={() => handleSelect(category.title)}
           >
-            <div className="flex flex-col items-center">
+            <CardContent className="flex flex-col items-center h-full p-6">
               <img
                 src={category.icon}
                 alt={category.title}
                 className="w-16 h-16 mb-4"
               />
-              <h2 className="text-lg font-semibold mb-2">{category.title}</h2>
-              <p className="text-sm text-center text-gray-600">
+              <CardTitle className="text-lg mb-2 text-center capitalize">
+                {category.title.replace(/-/g, " ").replace(/and/g, "&")}
+              </CardTitle>
+              <CardDescription className="text-center my-auto">
                 {category.description}
-              </p>
-            </div>
-          </div>
+              </CardDescription>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </div>
