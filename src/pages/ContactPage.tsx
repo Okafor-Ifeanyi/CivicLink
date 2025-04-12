@@ -173,7 +173,14 @@ export const ContactPage = () => {
         </div>
       </section>
 
-      {startSearch && <SearchOfficials filters={filters} />}
+      {startSearch && (
+        <SearchOfficials
+          category={categories?.find(
+            (category) => category.name === filters.category
+          )}
+          filters={filters}
+        />
+      )}
     </div>
   );
 };

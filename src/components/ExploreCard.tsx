@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import { cn } from "../lib/utils";
 
 interface ExploreCardProps {
   image: string;
   heading: string;
   subtitle: string;
+  className?: string;
 }
 
-export const ExploreCard = ({ image, heading, subtitle }: ExploreCardProps) => {
+export const ExploreCard = ({
+  image,
+  heading,
+  subtitle,
+  className,
+}: ExploreCardProps) => {
   return (
-    <div className="card shadow-md">
+    <div className={cn("card shadow-md", className)}>
       <img src={image} alt={heading} className="" />
       <article>
         <h2 className="">{heading}</h2>

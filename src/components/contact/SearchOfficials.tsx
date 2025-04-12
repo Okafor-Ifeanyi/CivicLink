@@ -1,22 +1,31 @@
-import { Official, OfficialFieldFilter } from "../../types/official.type";
+import {
+  Category,
+  Official,
+  OfficialFieldFilter,
+} from "../../types/official.type";
 import { useOfficials } from "../../services/hooks/use-official";
 import { UserIcon } from "lucide-react";
 import { Button } from "../ui/button";
+import nigerianPeople from "@/assets/7e5bcd5f5459137f6d4e984c8372c605.jpeg";
 
 const SearchOfficials: React.FC<{
   filters: OfficialFieldFilter;
-}> = ({ filters }) => {
+  category: Category | undefined;
+}> = ({ filters, category }) => {
   const { officials, isOfficialsLoading, officialsError } =
     useOfficials(filters);
 
   const officialBanner = filters.category && (
-    <div className="relative sm:w-[90%] h-75 mx-auto flex flex-col justify-center items-center rounded-xl">
+    <div className="relative sm:w-[90%] overflow-hidden h-75 mx-auto flex flex-col justify-center items-center rounded-xl">
       <img
-        src="/icons/voting.svg"
-        alt={`${filters.category} officals image`}
-        className="object-cover"
+        src={category?.image ?? nigerianPeople}
+        alt={`${category?.name} officals image`}
+        className="object-cover -z-10 size-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
-      <h2>{filters.category}</h2>
+      <div className="overlay absolute top-0 left-0 w-full h-full bg-black opacity-50" />
+      <h2 className="text-white text-4xl font-bold z-10 capitalize">
+        {category?.name}
+      </h2>
     </div>
   );
 

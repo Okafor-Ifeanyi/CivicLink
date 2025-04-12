@@ -20,7 +20,7 @@ const OfficialCard = ({ official }: { official: Official }) => {
           {official.image ? (
             <img
               src={official.image}
-              alt="Engr. Adebayo Adelabu"
+              alt={official.name}
               width={96}
               height={96}
               className="rounded-full size-full object-cover"

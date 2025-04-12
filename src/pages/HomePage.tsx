@@ -20,8 +20,10 @@ export const HomePage = () => {
     <>
       <section className="home-page">
         <div className="wrapper">
-          <h1>Find the Right Government Office. Instantly.</h1>
-          <p>
+          <h1 className="animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            Find the Right Government Office. Instantly.
+          </h1>
+          <p className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150">
             Use CivicLink Navigator to explore Nigeria&apos;s government
             structure and connect with the right officials at the federal,
             state, or local level.
@@ -31,7 +33,7 @@ export const HomePage = () => {
               e.preventDefault();
               navigate(`/services?step=3&search=${search}`);
             }}
-            className="flex max-sm:flex-col gap-4"
+            className="flex max-sm:flex-col gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200"
           >
             <div className="relative text-white">
               <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4" />
@@ -52,8 +54,10 @@ export const HomePage = () => {
 
       <section className="container mx-auto explore">
         <article className="intro mb-4 text-center">
-          <h1 className="text-4xl font-bold">What CivicLink Helps You Do</h1>
-          <p>
+          <h1 className="text-4xl font-bold animate-in fade-in duration-1000 delay-200">
+            What CivicLink Helps You Do
+          </h1>
+          <p className="animate-in fade-in duration-1000 delay-200">
             Making it easier to find who&apos;s responsible, and how to reach
             them.
           </p>
@@ -63,11 +67,13 @@ export const HomePage = () => {
             image={imagePath}
             heading="Understand Government Hierarchy"
             subtitle="Interactive breakdown of how responsibilities are distributed."
+            className="animate-in fade-in duration-1000 delay-200"
           />
           <ExploreCard
             image={imagePath2}
             heading="Search by Location or Topic"
             subtitle="Whether it's road repairs in Kano or school grants in Lagos, we help you find who’s responsible."
+            className="animate-in fade-in duration-1000 delay-200"
           />
           <ExploreCard
             image={imagePath3}
