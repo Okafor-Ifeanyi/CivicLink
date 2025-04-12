@@ -19,7 +19,7 @@ const LabeledSelect: React.FC<LabeledSelectProps> = ({
     <div className="labeled-select">
       <label className="labeled-select__label">{label}</label>
       <select
-        className="labeled-select__select"
+        className="labeled-select__select issue-category"
         value={value}
         onChange={(e) => onChange?.(e.target.value)}
       >

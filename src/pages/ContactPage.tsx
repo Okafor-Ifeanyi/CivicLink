@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LabeledSelect from "../components/LabelSelect"
 import ProfileCard from "../components/ContactInfo";
+import { departments, issueSelect, regionSelect } from "../utils/State";
 
 export const ContactPage = () => {
     const [selectedLevel, setSelectedLevel] = useState<string>("");
@@ -29,21 +30,21 @@ export const ContactPage = () => {
                     <LabeledSelect
                         label="State/Region"
                         disabledOption="Independence Layout, Enugu"
-                        options={["Apple", "Banana", "Mango", "Orange"]}
+                        options={regionSelect}
                         value={selectedRegion}
                         onChange={setSelectedRegion}
                     />
                     <LabeledSelect
                         label="Issue"
                         disabledOption="Electricity and Power"
-                        options={[""]}
+                        options={issueSelect}
                         value={selectedIssue}
                         onChange={setSelectedIssue}
                     />
                     <LabeledSelect
                         label="Ministry/ Department"
                         disabledOption="Ministry or Electrical Power"
-                        options={["Apple", "Orange"]}
+                        options={departments}
                         value={selectedMinistry}
                         onChange={setSelectedMinistry}
                     />
