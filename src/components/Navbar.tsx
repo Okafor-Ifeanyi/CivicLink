@@ -1,64 +1,63 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import React from "react";
+import CivicLinkLogo from "./Logo";
 // import { useAuthContext } from "../context/auth.context";
 
+const links = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Service",
+    path: "/service",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
+
 const Navbar = () => {
-//   const { user, logout } = useAuthContext();
-//   const role = user && user.role;
-  const navigate = useNavigate();
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const HomePage = () => {
-    // logout();
-    navigate("/");
-  };
-
   return (
-    <div className="nav-bar">
-        <article>
-            <button className="logout" onClick={HomePage}><h1>CivicLink</h1>  </button>
-        </article>
-     
-        <nav className="navList">
-            <ul>
-                <li>
-                    <Link 
-                        to="/" 
-                        className={ currentPath === "/" ? "active-link" : "" } 
-                    > Home </Link>
-                </li>
-            
-                <li>
-                    <Link 
-                        to="/service" 
-                        className={ currentPath === "/service" ? "active-link" : "" } 
-                    > Service </Link>
-                </li>
-            
-                <li>
-                    <Link 
-                        to="/contact" 
-                        className={ currentPath === "/contact" ? "active-link" : "" } 
-                    > Contact Offical </Link>
-                </li>
-                <select 
-                    name="issue-category" 
-                    id="issue-category" 
-                    className="issue-category"
-                    // className={`issue-category ${issue ? 'selected' : ''}`}
-                    // value={issue}
-                    // onChange={(e) => setIssue(e.target.value)}
-                >
-                    <option value="" disabled selected>Language</option>
-                    <option value="">English</option>
-                    <option value="">Igbo</option>
-                    <option value="">Hausa</option>
-                    <option value="">Pidgin</option>
-                </select>
+    <nav className="nav-bar container mx-auto flex max-sm:flex-col gap-4 justify-between items-center min-h-22 p-4">
+      <CivicLinkLogo />
 
-            </ul>
-        </nav>
-    </div>
+      <ul className="flex gap-4 md:gap-10 items-center">
+        {links.map((link) => (
+          <li key={link.path} className="group relative">
+            <Link
+              to={link.path}
+              className={currentPath === link.path ? "font-bold" : ""}
+            >
+              {link.name}
+            </Link>
+            <hr className="border-b-2 border-gray-300 scale-x-0 group-hover:scale-x-100 transition-all duration-300" />
+          </li>
+        ))}
+        <Select>
+          <SelectTrigger className="bg-transparent border-none">
+            <SelectValue placeholder="Language" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="english">English</SelectItem>
+            <SelectItem value="igbo">Igbo</SelectItem>
+            <SelectItem value="hausa">Hausa</SelectItem>
+            <SelectItem value="pidgin">Pidgin</SelectItem>
+          </SelectContent>
+        </Select>
+      </ul>
+    </nav>
   );
 };
 

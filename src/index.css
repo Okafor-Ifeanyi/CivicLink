@@ -5,77 +5,12 @@
   --primary-color: #2284c5;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  box-sizing: border-box;
-}
-
 #root {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   box-sizing: border-box;
-}
-
-.nav-bar {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  margin: 10px auto;
-  /* background-color: red; */
-}
-
-.nav-bar button {
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.nav-bar article {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: start;
-}
-.nav-bar article h1 {
-  background: linear-gradient(94.74deg, #142b75 3.83%, #1e40af 66.62%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navList {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navList ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navList ul a {
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  color: black;
 }
 
 #issue-category {
@@ -278,26 +213,11 @@ body {
   box-sizing: border-box;
 }
 
-.explore .intro {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.explore .intro h1 {
-  font-size: 36px;
-  font-family: "Public Sans", sans-serif;
-  /* line-height: 80px; */
-  font-weight: 700;
-  margin: 20px 0;
-}
-
 .explore-cards {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   box-sizing: border-box;
   margin: 0 auto;
@@ -308,13 +228,11 @@ body {
   margin: 10px;
   /* padding: 20px; */
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .explore-cards .card img {
@@ -323,6 +241,7 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
+  margin-bottom: auto;
 }
 
 .explore-cards .card article {
@@ -364,19 +283,9 @@ body {
   align-items: center;
   box-sizing: border-box;
   background-color: #d2d9ef33;
-  margin: 20px auto;
-}
-
-.navigator-box {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  margin: 20px auto;
 }
 .navigator .photos {
-  width: 35%;
+  /* width: 35%; */
   height: 350px;
   border: none;
   box-sizing: border-box;
@@ -388,24 +297,6 @@ body {
   height: 150px;
   margin: 10px;
   box-sizing: border-box;
-}
-
-.navigate-text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.navigate-text h1 {
-  font-size: 36px;
-  font-family: "Public Sans", sans-serif;
-  line-height: 50px;
-  font-weight: 700;
-  margin: 20px 0;
 }
 
 .navigator .photos .first {
@@ -505,13 +396,13 @@ body {
   box-sizing: border-box;
 }
 
-.labeled-select select {
+/* .labeled-select select {
   width: 100%;
   padding: 15px 10px;
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 10px;
-}
+} */
 
 .labeled-select label {
   font-size: 14px;
