@@ -7,7 +7,6 @@ import navigationImg2 from '../assets/0cd23141c75c4929c05dc8d1322a35a8.jpeg';
 import navigationImg3 from '../assets/7e5bcd5f5459137f6d4e984c8372c605.jpeg';
 import navigationImg4 from '../assets/df18162ca8f2d2f6bb8d4b0b9844226a.jpeg';
 
-
 export const HomePage = () => {
     return ( 
         <>
