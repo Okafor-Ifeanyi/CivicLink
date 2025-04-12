@@ -62,7 +62,7 @@ const legalLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-10 px-4">
+    <footer className="bg-primary text-white py-10 px-4 mt-auto">
       <div className="container mx-auto flex flex-wrap justify-between max-sm:items-center md:grid gap-4 max-sm:[&_li.group]:mx-auto">
         <div className="col-span-2 space-y-4">
           <CivicLinkLogo mode="dark" />

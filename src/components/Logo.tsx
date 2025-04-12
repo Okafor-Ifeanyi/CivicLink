@@ -22,8 +22,8 @@ const CivicLinkLogo: React.FC<{
             background: `linear-gradient(94.74deg, ${
               mode === "light" ? "#142b75" : "#8a8feb"
             } 3.83%, ${mode === "light" ? "#1e40af" : "#5f84df"} 66.62%)`,
-            "-webkit-background-clip": "text",
-            "-webkit-text-fill-color": "transparent",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           } as React.CSSProperties
         }
       >

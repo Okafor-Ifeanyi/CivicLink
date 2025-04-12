@@ -77,10 +77,10 @@ const GovernmentOfficialsResult: React.FC<{
           <OfficialCardSkeleton />
         ) : officialsError ? (
           <p className="text-center text-red-600">Error fetching officials</p>
-        ) : officials!.length === 0 ? (
+        ) : officials?.length === 0 ? (
           <p className="text-center text-gray-600">No officials found</p>
         ) : (
-          officials!.map((official) => (
+          officials?.map((official) => (
             <OfficialCard key={official._id} official={official} />
           ))
         )}
