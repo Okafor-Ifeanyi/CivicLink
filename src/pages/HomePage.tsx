@@ -9,8 +9,13 @@ import navigationImg4 from "../assets/df18162ca8f2d2f6bb8d4b0b9844226a.jpeg";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { SearchIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const HomePage = () => {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+
   return (
     <>
       <section className="home-page">
@@ -21,19 +26,27 @@ export const HomePage = () => {
             structure and connect with the right officials at the federal,
             state, or local level.
           </p>
-          <div className="flex max-sm:flex-col gap-4">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate(`/services?step=3&search=${search}`);
+            }}
+            className="flex max-sm:flex-col gap-4"
+          >
             <div className="relative text-white">
               <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4" />
               <Input
                 type="text"
                 placeholder="Search by name, issues, location"
                 className="w-96 placeholder:text-white pl-8"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
               />
             </div>
-            <Button type="button" variant="secondary" size="lg">
+            <Button type="submit" variant="secondary" size="lg">
               Search
             </Button>
-          </div>
+          </form>
         </div>
       </section>
 
