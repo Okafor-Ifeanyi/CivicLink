@@ -6,7 +6,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import React from "react";
 import CivicLinkLogo from "./Logo";
 // import { useAuthContext } from "../context/auth.context";
 

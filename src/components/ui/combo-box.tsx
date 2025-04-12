@@ -3,8 +3,8 @@
 import * as React from "react";
 import { AlertCircle, Check, ChevronsUpDown, Loader2 } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from "../../lib/utils";
+import { Button } from "./button";
 import {
   Command,
   CommandEmpty,
@@ -12,12 +12,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+} from "./command";
+import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
 interface ComboBoxProps {
   items: { value: string; label: string }[] | undefined;
